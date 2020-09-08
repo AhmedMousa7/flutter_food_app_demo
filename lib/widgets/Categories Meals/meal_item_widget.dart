@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/mealdetails/MealDetailsScreen.dart';
 import '../../models/Categories.dart';
 
 class MealItemWidget extends StatelessWidget {
@@ -18,10 +19,16 @@ class MealItemWidget extends StatelessWidget {
     @required this.affordability,
   });
 
+  _onItemSelected(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+      return MealDetailsScreen(this.title,);
+    }));
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => {},
+      onTap: () => _onItemSelected(context),
       child: itemContent(context),
     );
   }

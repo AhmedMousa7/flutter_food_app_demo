@@ -36,8 +36,6 @@ class _BottomTabBarState extends State<BottomTabBar> {
       ),
       body: _pages[_selectedPageIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.grey,
         currentIndex: _selectedPageIndex,
         items: _bottomViewItems,
         onTap: _selectPage,
